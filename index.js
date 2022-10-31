@@ -348,9 +348,17 @@ class Dashboard {
     });
 
     this.burgerButton.addEventListener("click", function (e) {
-      if (dashboard.burgerMenu.classList.length === 1) {
-        dashboard.burgerMenu.classList.add("burger-menu-active");
-      } else {
+      dashboard.burgerMenu.classList.toggle("burger-menu-active");
+      document.onscroll = (event) => {
+        dashboard.burgerMenu.classList.remove("burger-menu-active");
+      };
+    });
+
+    document.addEventListener("click", function (event) {
+      if (
+        !dashboard.burgerMenu.contains(event.target) &&
+        !dashboard.burgerButton.contains(event.target)
+      ) {
         dashboard.burgerMenu.classList.remove("burger-menu-active");
       }
     });
