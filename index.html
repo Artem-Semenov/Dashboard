@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/dashboard/style.css" />
     <title>Dashboard</title>
   </head>
   <body>
@@ -19,7 +19,7 @@
       <div class="dash-wrapper">
         <div class="left-wrapper">
           <div class="left-top-button">
-            <button> <img src="./Img/left-top img.png" alt=""></button>
+            <button><img src="/dashboard/Img/left-top img.png" alt=""></button>
           </div>
           <div class="left-middle-button">
             <button></button>
@@ -34,7 +34,7 @@
           <div class="middle-top-wrapper">
             <div class="middle-top-left-wrapper">
               <div class="middle-top-left-content-wrapper">
-                <p>Limits</p>
+                <p class="t-a-center">Limits</p>
                 <div class="limits-content-top">
                   <div class="limits-content-top-circle"></div>
                   <div class="limits-content-top-text">
@@ -68,7 +68,7 @@
             </div>
             <div class="middle-top-right-wrapper">
               <div class="middle-top-right-content-wrapper">
-                <p>Pairs</p>
+                <p class="t-a-center">Pairs</p>
                 <div class="pairs-top-content">
                   <div class="currency-display-change-wrapper">
                     <div class="currency-display"><span>BTC / USD</span></div>
@@ -79,7 +79,7 @@
                   <div class="pairs-img-wrapper">
                     <img
                       class="currency-change-img"
-                      src="./Img/pairs-top-vector.png"
+                      src="/dashboard/Img/pairs-top-vector.png"
                       alt="currency_change"
                     />
                   </div>
@@ -88,7 +88,7 @@
                   <div class="pairs-coins-pair-wrapper">
                     <div class="coins-pair-wrap">
                       <div class="coin-display">
-                        <img src="./Img/ethereum icon.png" alt="" />
+                        <img src="/dashboard/Img/ethereum icon.png" alt="" />
                       </div>
                       <div>
                         <p>ETH / USD</p>
@@ -98,7 +98,7 @@
                     <div class="pairs-coins-percentage-wrap">
                       <div>
                         <img
-                          src="./Img/chatr grenn chart coin goes up.png"
+                          src="/dashboard/Img/chatr grenn chart coin goes up.png"
                           alt=""
                         />
                       </div>
@@ -108,7 +108,7 @@
                         </div>
                         <div>
                           <img
-                            src="./Img/little green arrow coin goes up.png"
+                            src="/dashboard/Img/little green arrow coin goes up.png"
                             alt=""
                           />
                         </div>
@@ -120,7 +120,7 @@
                   <div class="pairs-coins-pair-wrapper">
                     <div class="coins-pair-wrap">
                       <div class="coin-display">
-                        <img src="./Img/xrp-icon.png" alt="" />
+                        <img src="/dashboard/Img/xrp-icon.png" alt="" />
                       </div>
                       <div>
                         <p>XRP / USD</p>
@@ -130,7 +130,7 @@
                     <div class="pairs-coins-percentage-wrap">
                       <div>
                         <img
-                          src="./Img/chatr grenn chart coin goes up.png"
+                          src="/dashboard/Img/chatr grenn chart coin goes up.png"
                           alt=""
                         />
                       </div>
@@ -140,7 +140,7 @@
                         </div>
                         <div>
                           <img
-                            src="./Img/little green arrow coin goes up.png"
+                            src="/dashboard/Img/little green arrow coin goes up.png"
                             alt=""
                           />
                         </div>
@@ -161,7 +161,17 @@
           </div>
         </div>
         <div class="right-wrapper">
+          <div class ="burger-icon"><button id ="burger-button"><img  src="/dashboard/Img/burger-menu-icon.png" alt=""></button></div>
+          <div class="burger-menu" id="burger-menu">
+            <ul>
+              <li><a href="/">Incomes</a></li>
+              <li><a href="/">Payments</a></li>
+              <li><a href="/">Foundation</a></li>
+            </ul>
+          </div>
           <div class="right-top-title"><p>Assets</p></div>
+          <div class="mobile-separator-top"></div>
+          <div class="mobile-separator-bottom"></div>
           <div class="slider">
             <div class="slider-line" id="slider-line"></div>
           </div>
@@ -170,7 +180,7 @@
           </div>
 
           <div class="right-cards-content">
-            <p>My cards</p>
+            <p>My Cards</p>
             <div class="bottom-slider-wrapper">
               <div class="bottom-slider-line" id="bottom-slider-line">
               </div>
@@ -183,6 +193,6 @@
         </div>
       </div>
     </div>
-    <script src="./index.js"></script>
+    <script src="/dashboard/index.js"></script>
   </body>
 </html>
