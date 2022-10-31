@@ -25,7 +25,7 @@ const assets = [
     index: 2,
     data: [2287, 2392, 1999, 2300, 2000, 2222, 2120],
   },
- {
+  {
     coin: "Ripple",
     shortName: "XRP",
     amount: 278,
@@ -38,10 +38,10 @@ const assets = [
     index: 3,
     data: [5, 5.5, 4.9, 3.7, 6, 5.9, 5.5],
   },
-   /* 
-    {
+
+  {
     coin: "Cronos",
-    shortName: 'CRO',
+    shortName: "CRO",
     amount: 333,
     price: 8.2,
     priceChange: 12,
@@ -51,8 +51,7 @@ const assets = [
     img: "/Dashboard/Img/xrp-icon.png",
     index: 4,
     data: [5, 3, 2, 1.5, 2, 2.2, 3],
-    
-  },
+  } /* 
   {
     coin: "XLM",
     shortName: 'XLM',
@@ -103,7 +102,7 @@ const assets = [
     active: false,
     img: "/Dashboard/Img/xrp-icon.png",
     index: 8,
-  },  */ 
+  },  */,
 ];
 
 const cards = [
@@ -115,42 +114,31 @@ const cards = [
   { name: "Onto", type: "DEBIT", number: 7092, index: 6, id: "30365OnePay" },
 ];
 
-
 class Dashboard {
-
-_render () {
-
-
+  _render() {
     this.sliderLine = document.getElementById("slider-line");
     this.sliderDots = document.getElementById("slider-dots-wrapper");
     this.limitsDisplayLine = document.getElementById("limits-display-slider");
     this.limitsTextLine = document.getElementById("limits-text-slider");
     this.bottomSliderLine = document.getElementById("bottom-slider-line");
     this.thumb = document.getElementById("slider-targeter");
-    
+
     this.canvasWrapper = document.getElementById("middle-bottom-wrapper");
-    
+
     this.testRange = document.getElementById("testRange");
-    this.newDataset = '';
+    this.newDataset = "";
 
+    this._changeData(myChart);
 
-  
-
-  
-  this._changeData(myChart)
-
-
-  let htmlForMainSlider = "";
-  let htmlForDisplayPecentageChange = "";
-  let htmlForDisplayPriceChange = "";
-  let htmlForSliderDots = "";
-  let htmlForBottomSlider = "";
-  let sliderLineMove = 23;
-  let limitsSliderMove = 9;
-  let elindex;
-  let activeDotId;
-  assets.forEach((el) => {
-    htmlForMainSlider += `<div
+    let htmlForMainSlider = "";
+    let htmlForDisplayPecentageChange = "";
+    let htmlForDisplayPriceChange = "";
+    let htmlForSliderDots = "";
+    let htmlForBottomSlider = "";
+    let elindex;
+    let activeDotId;
+    assets.forEach((el) => {
+      htmlForMainSlider += `<div
     class="slider-element"
     id=${el.id}
     data-id=${el.id}>
@@ -177,8 +165,8 @@ _render () {
       <span data-id=${el.id}>(${el.profit}%)</span>
     </div>
   </div>`;
-  
-    htmlForDisplayPecentageChange += `<div class="limits-display-slider-element">
+
+      htmlForDisplayPecentageChange += `<div class="limits-display-slider-element">
   <div>
    <img src="/Dashboard/Img/limits-bottom-display.png" />
   </div>
@@ -186,31 +174,30 @@ _render () {
     <p>+${el.priceChange}%</p>
     </div>
   </div>`;
-  
-    htmlForDisplayPriceChange += `<div>
+
+      htmlForDisplayPriceChange += `<div>
   <p>${el.shortName} price</p>
   <span>$${el.price}</span>
   </div>`;
-  
-    htmlForSliderDots += `<button
+
+      htmlForSliderDots += `<button
   class="slider-dot"
   id="dot-${el.index}"
   data-id="${el.id}"
   >
   </button>`;
-  
-    if(el.active) {
-    this.newDataset = el.data;
-    dashboard._changeData(myChart);
-  
-    activeDotId = `dot-${el.index}`;
-      elindex = el.index - 1;
-  
-  }  
-  }); 
-  
-  cards.forEach((el) => {
-    htmlForBottomSlider += `
+
+      if (el.active) {
+        this.newDataset = el.data;
+        dashboard._changeData(myChart);
+
+        activeDotId = `dot-${el.index}`;
+        elindex = el.index - 1;
+      }
+    });
+
+    cards.forEach((el) => {
+      htmlForBottomSlider += `
   <div class="bottom-slider-element" data-id = ${el.id}>
   <div class="bottom-slider-element-inner-wrapper" data-id = ${el.id}>
   <div class="bottom-slider-top-text" data-id = ${el.id}>
@@ -229,141 +216,150 @@ _render () {
   </div>
   </div>
   `;
-  });
-  
-  this.limitsTextLine.innerHTML = htmlForDisplayPriceChange;
-  this.sliderLine.innerHTML = htmlForMainSlider;
-  this.limitsDisplayLine.innerHTML = htmlForDisplayPecentageChange;
-  this.sliderDots.innerHTML = htmlForSliderDots;
-  this.bottomSliderLine.innerHTML = htmlForBottomSlider;
-  document.getElementById(activeDotId).classList.add("slider_dot_active");
-  this.sliderLine.style.top = `${sliderLineMove - 210 * elindex}px`;
-  this.limitsDisplayLine.style.top = `${limitsSliderMove - 55 * elindex}px`;
-  this.limitsTextLine.style.top = `${-77 * elindex}px`;
+    });
 
-
-
+    this.limitsTextLine.innerHTML = htmlForDisplayPriceChange;
+    this.sliderLine.innerHTML = htmlForMainSlider;
+    this.limitsDisplayLine.innerHTML = htmlForDisplayPecentageChange;
+    this.sliderDots.innerHTML = htmlForSliderDots;
+    this.bottomSliderLine.innerHTML = htmlForBottomSlider;
+    document.getElementById(activeDotId).classList.add("slider_dot_active");
   }
- 
-Init() {
-  this.thumbWrapper = document.getElementById("slider-targeter-wrapper");
-  this.thumbWrapper.innerHTML = `<input type = 'range' class ="testRange" id ="testRange" style = 'width: ${this.thumbWrapper.offsetWidth}px' min = '0' max = '${cards.length - 1}' value = '0'/>`;
-  this.burgerButton = document.getElementById("burger-button")
-  this.burgerMenu = document.getElementById("burger-menu")
-  this.myChart = new Chart(document.getElementById("myChart"), {
-    type: "line",
-    data: {
-      labels: ["5 Nov", "10 Nov", "15 Nov", "20 Nov", "25 Nov", "30 Nov"],
-      datasets: [
-        {
-          backgroundColor: "#636CED",
-          borderColor: "#636CED",
-          data: [1,2,3,4,5],
-        },
-      ],
-    },
-    options: {
-      plugins: {
-        legend: {
-          display: false,
+
+  Init() {
+    this.thumbWrapper = document.getElementById("slider-targeter-wrapper");
+    this.thumbWrapper.innerHTML = `<input type = 'range' class ="testRange" id ="testRange" style = 'width: ${
+      this.thumbWrapper.offsetWidth
+    }px' min = '0' max = '${cards.length - 1}' value = '0'/>`;
+    this.burgerButton = document.getElementById("burger-button");
+    this.burgerMenu = document.getElementById("burger-menu");
+    this.myChart = new Chart(document.getElementById("myChart"), {
+      type: "line",
+      data: {
+        labels: ["5 Nov", "10 Nov", "15 Nov", "20 Nov", "25 Nov", "30 Nov"],
+        datasets: [
+          {
+            backgroundColor: "#636CED",
+            borderColor: "#636CED",
+            data: [1, 2, 3, 4, 5],
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false,
+          },
         },
       },
-    },
-  });
+    });
 
-this._render()
+    this._render();
 
-this._addEventListeners()
+    this._addEventListeners();
+  }
 
-
-
-};
-
-_sliderActiveCoin(shortName) {
-  assets.forEach((el) => {
-    if (el.shortName === shortName) {
-      el.active = true;
-    } else {
-      el.active = false;
-    }
-  });
-}
-
-
-
-_changeData(chart) {
-  this.myChart.data.datasets.forEach((dataset) => {
-      dataset.data = this.newDataset
-  });
-  this.myChart.update();
-}
-
-_addEventListeners () {
-  this.sliderLine.addEventListener("click", function (event) {
+  _sliderActiveCoin(shortName) {
     assets.forEach((el) => {
-      if (event.target.dataset.id === el.id && !el.active) {
-        dashboard._sliderActiveCoin(el.shortName.toString());
-        dashboard._render()
+      if (el.shortName === shortName) {
+        el.active = true;
+      } else {
+        el.active = false;
       }
     });
-   
-  });
-  
-  this.sliderDots.addEventListener("click", function (e) {
-    assets.forEach((el) => {
-      if (e.target.dataset.id === el.id && !el.active) {
-        dashboard._sliderActiveCoin(el.shortName.toString());
-        dashboard._render();
-      }
-    });
-  
-    
-  });
-  
-  
-  this.testRange.addEventListener('input', function(event) {
-  console.log(testRange.value);
-    dashboard.bottomSliderLine.style.left = -200 * (testRange.value) +'px'
-  })
-  
-  
-  this.bottomSliderLine.addEventListener("click", function (event) {
-   // event.preventDefault()
-    let elindex = dashboard.bottomSliderLine.offsetWidth / 280;
-    cards.forEach((el) => {
-      if (event.target.dataset.id === el.id) {
-        dashboard.bottomSliderLine.style.left = (el.index - 1) * -200 + "px";
-        testRange.value = el.index - 1
-      }
-    });
-  });
-  
-  this.burgerButton.addEventListener('click', function(e) {
-  if (dashboard.burgerMenu.classList.length === 1) {;
-  dashboard.burgerMenu.classList.add("burger-menu-active")
-  } else {dashboard.burgerMenu.classList.remove("burger-menu-active")
+  }
 
+  _changeData(chart) {
+    this.myChart.data.datasets.forEach((dataset) => {
+      dataset.data = this.newDataset;
+    });
+    this.myChart.update();
+  }
+
+  _addEventListeners() {
+    this.sliderLine.addEventListener("click", function (event) {
+      assets.forEach((el, ind) => {
+        if (event.target.dataset.id === el.id && !el.active) {
+          let activeDotId = `dot-${el.index}`;
+          dashboard._sliderActiveCoin(el.shortName.toString());
+          dashboard.newDataset = el.data;
+          dashboard._changeData(myChart);
+          document
+            .getElementById("slider-dots-wrapper")
+            .childNodes.forEach((el) => {
+              el.classList.remove("slider_dot_active");
+            });
+
+          document
+            .getElementById(activeDotId)
+            .classList.add("slider_dot_active");
+          assets.forEach((el) => {
+            if (el.active) {
+              let elindex = el.index - 1;
+              dashboard.sliderLine.style.top = `${25 - 210 * elindex}px`;
+              dashboard.limitsDisplayLine.style.top = `${10 - 55 * elindex}px`;
+              dashboard.limitsTextLine.style.top = `${-77 * elindex}px`;
+            }
+          });
+        }
+      });
+    });
+
+    this.sliderDots.addEventListener("click", function (e) {
+      assets.forEach((el) => {
+        if (e.target.dataset.id === el.id && !el.active) {
+          let activeDotId = `dot-${el.index}`;
+          dashboard._sliderActiveCoin(el.shortName.toString());
+          dashboard.newDataset = el.data;
+          dashboard._changeData(myChart);
+          document
+            .getElementById("slider-dots-wrapper")
+            .childNodes.forEach((el) => {
+              el.classList.remove("slider_dot_active");
+            });
+          document
+            .getElementById(activeDotId)
+            .classList.add("slider_dot_active");
+          assets.forEach((el) => {
+            if (el.active) {
+              let elindex = el.index - 1;
+              dashboard.sliderLine.style.top = `${25 - 210 * elindex}px`;
+              dashboard.limitsDisplayLine.style.top = `${10 - 55 * elindex}px`;
+              dashboard.limitsTextLine.style.top = `${-77 * elindex}px`;
+            }
+          });
+        }
+      });
+    });
+
+    this.testRange.addEventListener("input", function (event) {
+      dashboard.bottomSliderLine.style.left = -200 * testRange.value + "px";
+    });
+
+    this.bottomSliderLine.addEventListener("click", function (event) {
+      // event.preventDefault()
+      let elindex = dashboard.bottomSliderLine.offsetWidth / 280;
+      cards.forEach((el) => {
+        if (event.target.dataset.id === el.id) {
+          dashboard.bottomSliderLine.style.left = (el.index - 1) * -200 + "px";
+          testRange.value = el.index - 1;
+        }
+      });
+    });
+
+    this.burgerButton.addEventListener("click", function (e) {
+      if (dashboard.burgerMenu.classList.length === 1) {
+        dashboard.burgerMenu.classList.add("burger-menu-active");
+      } else {
+        dashboard.burgerMenu.classList.remove("burger-menu-active");
+      }
+    });
+  }
 }
-  })
-}
 
-} 
+const dashboard = new Dashboard();
 
-const dashboard = new Dashboard
-
-
-
-dashboard.Init()
-
-
-
-
-
-
-
-
-
-
+dashboard.Init();
 
 /* const sliderLine = document.getElementById("slider-line");
 const sliderDots = document.getElementById("slider-dots-wrapper");
@@ -570,7 +566,6 @@ _render();
 
 _addEventListeners()
  */
-
 
 /* thumb.addEventListener("mousedown", function (event) {
   let elindex = (bottomSliderLine.offsetWidth - 200) / 230;
