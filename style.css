@@ -78,7 +78,7 @@ border-image-source: linear-gradient(315deg, rgba(65, 72, 105, 0) 32.81%, #5E658
   background: linear-gradient(135deg, #424869 24.41%, #4A5178 81.64%);
   box-shadow: inset 2px 2px 4px rgba(38, 49, 105, 0.18), inset -2px -2px 4px rgba(83, 92, 136, 0.16);
   border-radius: 19px;
-/* background: url(/dashboard/Img/left-top\ img.png) 21px 22px no-repeat; */
+/* background: url(/Dashboard/Img/left-top\ img.png) 21px 22px no-repeat; */
 padding: 1px 0px 0px 1px;
 }
 
@@ -98,7 +98,7 @@ border-radius: 21px;
   border-radius: 19px;
   width: 58px;
   height: 58px;
-background: url(/dashboard/Img/left-middle\ img.png) 21px 22px no-repeat;
+background: url(/Dashboard/Img/left-middle\ img.png) 21px 22px no-repeat;
 margin-bottom: 80px;
 }
 
@@ -116,7 +116,7 @@ border-radius: 21px;
   border-radius: 19px;
   width: 58px;
   height: 58px;
-  background: url(/dashboard/Img/arrow\ to\ the\ right.png) 23px 23px no-repeat, url(/dashboard/Img/arrow\ to\ the\ left.png) 30px 30px no-repeat;
+  background: url(/Dashboard/Img/arrow\ to\ the\ right.png) 23px 23px no-repeat, url(/Dashboard/Img/arrow\ to\ the\ left.png) 30px 30px no-repeat;
   
 }
 .middle-wrapper {
@@ -293,7 +293,7 @@ text-shadow: 1px 1px 1px rgba(38, 43, 70, 0.32);
   margin-top: 10px;
 width: 242px;
 height: 241px;
-background: url(/dashboard/Img/limits-circle.png);
+background: url(/Dashboard/Img/limits-circle.png);
 }
 .limits-content-top-text {
   padding-top: 10px;
@@ -313,7 +313,7 @@ background: url(/dashboard/Img/limits-circle.png);
  
 }
 .limits-montly-wrapper{
-background: url(/dashboard/Img/yellow\ buble.png) -3px 0px no-repeat;
+background: url(/Dashboard/Img/yellow\ buble.png) -3px 0px no-repeat;
 margin-bottom: 29px;
 }
 
@@ -326,7 +326,7 @@ margin-bottom: 29px;
 }
 
 .limits-yearly-wrapper {
-  background: url(/dashboard/Img/purple\ bubble.png) 0px 3px no-repeat;
+  background: url(/Dashboard/Img/purple\ bubble.png) 0px 3px no-repeat;
 }
 .limits-yearly-wrapper p{
 margin-bottom: 1px;
