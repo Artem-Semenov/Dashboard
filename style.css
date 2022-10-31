@@ -265,7 +265,7 @@ box-shadow: -6px -6px 24px rgba(85, 93, 131, 0.48), 8px 8px 22px rgba(54, 59, 87
   margin-bottom: 7px;
 }
 .limits-text-slider span{
-  margin-left: 6px;
+  margin-left: 0px;
   margin-top: 10px;
   font-size: 42px;
 }
