@@ -35,13 +35,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+  background-color: #424869;
 
 }
 .wrapper {
   Stroke: linear-gradient(0% 90.99% at 0% 0%, rgba(93, 101, 142, 0.48), rgba(35, 39, 62, 0));
   height: 1200px;
   padding: 26px 0px 0px 5px;
-  background-color: #424869;
+  
  
 }
 
@@ -841,7 +842,6 @@ box-shadow: -32px -32px 48px  rgba(76, 83, 118, 0.17), 34px 34px 64px rgba(50, 5
   }
 .bottom-slider-wrapper {
   width: 365px;
-  /* box-shadow: 10px 0px 20px rgba(73, 80, 115, 0.72) */
 }
 .middle-top-left-wrapper{
 margin: 0 auto;
