@@ -918,21 +918,5 @@ font-size: 40px;
 opacity: 1;
 visibility: visible;
 }
-.mobile-separator-top {
-  position: absolute;
-  width: 250px;
-top: 70px;
-left: 50px;
-  height: 1px;
-  background: #2c314b;
-}
-.mobile-separator-bottom {
-  position: absolute;
-  width: 250px;
-  top: 69px;
-  left: 49px;
-  height: 1px;
-  background: #5A6086;
-}
 
 }
