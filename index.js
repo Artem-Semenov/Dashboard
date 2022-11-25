@@ -8,7 +8,7 @@ const assets = [
     profit: 15,
     id: "btc-slider-element",
     active: true,
-    img: "/Dashboard/Img/btc icon.png",
+    img: "/Img/btc icon.png",
     index: 1,
     data: [26000, 25000, 24600, 22918, 23385, 25670, 27620],
   },
@@ -21,7 +21,7 @@ const assets = [
     profit: 80,
     id: "ethereum-slider-element",
     active: false,
-    img: "/Dashboard/Img/ethereum icon.png",
+    img: "/Img/ethereum icon.png",
     index: 2,
     data: [2287, 2392, 1999, 2300, 2000, 2222, 2120],
   },
@@ -34,7 +34,7 @@ const assets = [
     profit: -27,
     id: "xrp-slider-element",
     active: false,
-    img: "/Dashboard/Img/xrp-icon.png",
+    img: "/Img/xrp-icon.png",
     index: 3,
     data: [5, 5.5, 4.9, 3.7, 6, 5.9, 5.5],
   },
@@ -48,7 +48,7 @@ const assets = [
     profit: -47,
     id: "cro-slider-element",
     active: false,
-    img: "/Dashboard/Img/xrp-icon.png",
+    img: "/Img/xrp-icon.png",
     index: 4,
     data: [5, 3, 2, 1.5, 2, 2.2, 3],
   } /* 
@@ -61,7 +61,7 @@ const assets = [
     profit: -47,
     id: "xlm-slider-element",
     active: false,
-    img: "/Dashboard/Img/xrp-icon.png",
+    img: "/Img/xrp-icon.png",
     index: 5,
   },
   {
@@ -73,7 +73,7 @@ const assets = [
     profit: -27,
     id: "mat-slider-element",
     active: false,
-    img: "/Dashboard/Img/xrp-icon.png",
+    img: "/Img/xrp-icon.png",
     index: 6,
     data: [5, 5.5, 4.9, 3.7, 6, 5.9, 5.5],
   },
@@ -86,7 +86,7 @@ const assets = [
     profit: -47,
     id: "ttr-slider-element",
     active: false,
-    img: "/Dashboard/Img/xrp-icon.png",
+    img: "/Img/xrp-icon.png",
     index: 7,
     data: [5, 3, 2, 1.5, 2, 2.2, 3],
     
@@ -100,7 +100,7 @@ const assets = [
     profit: -47,
     id: "xls-slider-element",
     active: false,
-    img: "/Dashboard/Img/xrp-icon.png",
+    img: "/Img/xrp-icon.png",
     index: 8,
   },  */,
 ];
@@ -168,7 +168,7 @@ class Dashboard {
 
       htmlForDisplayPecentageChange += `<div class="limits-display-slider-element">
   <div>
-   <img src="/Dashboard/Img/limits-bottom-display.png" />
+   <img src="/Img/limits-bottom-display.png" />
   </div>
     <div>
     <p>+${el.priceChange}%</p>
@@ -210,7 +210,7 @@ class Dashboard {
       <p>${el.number}</p>
     </div>
     <div class="bottom-slider-bottom-right-img" data-id = ${el.id}>
-      <img src="/Dashboard/Img/Visa icon.png" alt="" data-id = ${el.id}>
+      <img src="/Img/Visa icon.png" alt="" data-id = ${el.id}>
     </div>
   </div>
   </div>
@@ -498,7 +498,7 @@ function _render() {
 
     htmlForDisplayPecentageChange += `<div class="limits-display-slider-element">
   <div>
-   <img src="/Dashboard/Img/limits-bottom-display.png" />
+   <img src="/Img/limits-bottom-display.png" />
   </div>
     <div>
     <p>+${el.priceChange}%</p>
@@ -541,7 +541,7 @@ data-id="${el.id}"
       <p>${el.number}</p>
     </div>
     <div class="bottom-slider-bottom-right-img" data-id = ${el.id}>
-      <img src="/Dashboard/Img/Visa icon.png" alt="" data-id = ${el.id}>
+      <img src="/Img/Visa icon.png" alt="" data-id = ${el.id}>
     </div>
   </div>
 </div>
