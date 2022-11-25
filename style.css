@@ -100,7 +100,7 @@ border-radius: 21px;
   border-radius: 19px;
   width: 58px;
   height: 58px;
-background: url(/Img/left-middle\ img.png) 21px 22px no-repeat;
+background: url(Img/left-middle\ img.png) 21px 22px no-repeat;
 margin-bottom: 80px;
 }
 
@@ -118,7 +118,7 @@ border-radius: 21px;
   border-radius: 19px;
   width: 58px;
   height: 58px;
-  background: url(/Img/arrow\ to\ the\ right.png) 23px 23px no-repeat, url(/Img/arrow\ to\ the\ left.png) 30px 30px no-repeat;
+  background: url(Img/arrow\ to\ the\ right.png) 23px 23px no-repeat, url(Img/arrow\ to\ the\ left.png) 30px 30px no-repeat;
   
 }
 .middle-wrapper {
@@ -295,7 +295,7 @@ text-shadow: 1px 1px 1px rgba(38, 43, 70, 0.32);
   margin-top: 10px;
 width: 242px;
 height: 241px;
-background: url(/Img/limits-circle.png);
+background: url(Img/limits-circle.png);
 }
 .limits-content-top-text {
   padding-top: 10px;
@@ -315,7 +315,7 @@ background: url(/Img/limits-circle.png);
  
 }
 .limits-montly-wrapper{
-background: url(/Img/yellow\ buble.png) -3px 0px no-repeat;
+background: url(Img/yellow\ buble.png) -3px 0px no-repeat;
 margin-bottom: 29px;
 }
 
@@ -328,7 +328,7 @@ margin-bottom: 29px;
 }
 
 .limits-yearly-wrapper {
-  background: url(/Img/purple\ bubble.png) 0px 3px no-repeat;
+  background: url(Img/purple\ bubble.png) 0px 3px no-repeat;
 }
 .limits-yearly-wrapper p{
 margin-bottom: 1px;
