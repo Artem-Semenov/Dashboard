@@ -830,7 +830,9 @@ box-shadow: -32px -32px 48px  rgba(76, 83, 118, 0.17), 34px 34px 64px rgba(50, 5
   .middle-top-right-content-wrapper > p{
 
   }
-  
+  .slider-targeter-wrapper {
+    left: 55px;
+  }
   .limits-content-top {
     margin-top: 10px;
   }
